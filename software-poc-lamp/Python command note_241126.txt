@@ -1,0 +1,150 @@
+﻿All frequetly python commands:
+sudo apt-get update
+sudo apt-get upgrade
+
+
+- Test I2C connection:
+sudo i2cdetect -y 1
+sudo i2cdetect -y 0
+
+- Isntall I2C tool:
+sudo apt-get install python3-smbus
+sudo apt-get install i2c-tools
+
+- Raspi-Config:
+sudo raspi-config
+
+- ADS1115 ADC install:
+sudo apt-get update
+sudo apt-get install build-essential python3-dev python3-smbus git
+cd ~
+git clone https://github.com/adafruit/Adafruit_Python_ADS1x15.git
+cd Adafruit_Python_ADS1x15
+sudo python setup.py install
+
+- RTC DS3231:
+write the system date and time to the RTC module using :
+sudo hwclock -w
+read the date and time back from the RTC using :
+sudo hwclock -r
+
+sudo pip3 install adafruit-circuitpython-ds3231
+
+import adafruit_ds3231
+import time
+import board
+i2c = board.I2C()  # uses board.SCL and board.SDA
+rtc = adafruit_ds3231.DS3231(i2c)
+rtc.datetime = time.struct_time((2017,1,9,15,6,0,0,9,-1))
+t = rtc.datetime
+
+
+- MAX31855 Thermocouple Sensor
+sudo pip3 install adafruit-circuitpython-max31855
+
+import board
+import digitalio
+import adafruit_max31855
+spi = board.SPI()
+cs = digitalio.DigitalInOut(board.D5)
+max31855 = adafruit_max31855.MAX31855(spi, cs)
+
+https://learn.adafruit.com/max31855-thermocouple-python-library/hardware
+sudo apt-get update
+sudo apt-get install build-essential python-dev python-pip python-smbus git
+sudo pip install RPi.GPIO
+sudo pip install Adafruit_BBIO
+
+cd ~
+git clone https://github.com/adafruit/Adafruit_Python_MAX31855.git
+cd Adafruit_Python_MAX31855
+sudo python setup.py install
+
+
+- Intall Pillow ImageTk
+sudo apt-get install python3-pil.imagetk
+sudo apt-get install python-tk
+
+sudo pip3 install matplotlib
+sudo pip3 install python3-matplotlib
+sudo pip3 install xlsxwriter
+
+- Install GPS U Blox 7 GPS Dongle:
+ls /dev/tty*
+sudo apt install gpsd gpsd-clients python3-pip -y
+sudo pip3 install pyserial pynmea2
+sudo apt install screen -y
+
+
+sudo apt -y install gpsd gpsd-clients
+# EditGPS config file
+sudo nano /etc/default/gpsd
+sudo apt-get install chrony
+systemctl is-active gpsd
+systemctl is-active chronyd
+#Run GPS software
+gpsmon -n
+
+Connect to HDMI monitor
+xrandr --verbose
+xrandr --output HDMI-1 --auto
+sudo apt-get install python3-pil.imagetk
+
+
+All python commands for setting up program running on ne Raspberry Pi:
+(Raspberry Pi 4B OS Debian Bullseye)
+
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo pip3 install drawnow
+sudo pip3 install xlsxwriter
+
+sudo apt install python3-pip
+sudo python3 -m pip install websockets
+
+sudo pip3 install pyserial pynmea2
+
+- ADS1115 ADC install:
+sudo apt-get install build-essential python3-dev python3-smbus git
+cd ~
+git clone https://github.com/adafruit/Adafruit_Python_ADS1x15.git
+cd Adafruit_Python_ADS1x15
+sudo python setup.py install
+
+sudo pip3 install adafruit-circuitpython-ds3231
+
+- MAX31855 Thermocouple Sensor
+sudo pip3 install adafruit-circuitpython-max31855
+
+- Isntall I2C tool:
+sudo apt-get install python3-smbus
+sudo apt-get install i2c-tools
+
+- Raspi-Config:
+sudo raspi-config
+
+(Turn on all interfaces like I2C, Serial ...)
+
+
+- Intall Pillow ImageTk
+sudo apt-get install python3-pil.imagetk
+sudo apt-get install python-tk
+
+sudo pip3 install matplotlib
+sudo pip3 install python3-matplotlib
+sudo pip3 install xlsxwriter
+
+- Install GPS U Blox 7 GPS Dongle:
+ls /dev/tty*
+sudo apt install gpsd gpsd-clients python3-pip -y
+sudo pip3 install pyserial pynmea2
+sudo apt install screen -y
+
+- install keyboard
+sudo apt install onboard
+sudo apt install wmctrl
+
+
+
+

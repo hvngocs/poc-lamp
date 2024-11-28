@@ -1,0 +1,15 @@
+Reaction teperature set for Sam, Camp: 67 degC and COV: 66 degC;
+Chip postion error <100;  
+Reaction time set for COV, Sal: 50 min and Camp: 60 min;
+Start calculation time at 5 min;
+Base line at 10000 (rateLimit = 10000); Derivative at 800 (noiseThreshold = 800);
+
+Software define:
+ WELL 1A, WELL 1B, WELL 2A, WELL 2B, WELL 3A, WELL 4A, WELL 1C, WELL 1D,  WELL 2C, WELL 2D, WELL 3D, WELL 4D
+ well 1 , 2      , 3      , 4      , 5      , 6      , 7      , 8      , 9       , 10     , 11     , 12 
+  
+PCB design:
+ LED     1 , 1      , 2      , 2      , 2      , 3      , 3      ,  3      , 4      , 4      , 3      ,  2
+ WELL    4A, WELL 3A, WELL 2A, WELL 1A, WELL 1B, WELL 1C, WELL 1D,  WELL 2D, WELL 3D, WELL 4D, WELL 2C,  WELL 2B
+ ADC No. 1 , 2      , 3      , 4      , 5      , 6      , 7      ,  8      , 9      , 10     , 11     ,  12 
+    ads1-0 , ads1-1 , ads1-2 , ads1-3 , ads2-0 , ads2-1 , ads2-2 ,  ads2-3 , ads3-0 , ads3-1 , ads3-2 ,  ads3-3
